@@ -1053,7 +1053,7 @@ static bool start_bt(void)
         log_d("BT status IDLE");
 
         if ((ret = esp_bt_controller_init(&cfg)) != ESP_OK) {
-            log_i("Bluetooth controller initialize failed: %s", esp_err_to_name(ret));
+            log_e("Bluetooth controller initialize failed: %s", esp_err_to_name(ret));
             return false;
          }
 
